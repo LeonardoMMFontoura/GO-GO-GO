@@ -3,11 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	// var card string = "Ace of Spades"
-	// Maneira alternativa de rescrever a declaração de variável acima
-	card := newCard()
-	// card = "five of diamonds"
-	fmt.Println(card)
+	cards := []string{newCard(), newCard()}
+	cards = append(cards, "Ace of Spades")
+
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
+
 }
 
 func newCard() string {
