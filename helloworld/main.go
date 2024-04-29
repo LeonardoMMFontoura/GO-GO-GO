@@ -2,12 +2,10 @@ package main
 
 import "fmt"
 
-func define() string {
-	const s string = "leonardo"
-	return s
+func Ola(nome string) string {
+	return "Ola, " + nome
 }
 
 func main() {
-	var pega = define()
-	fmt.Println(pega)
+	fmt.Println(Ola("Leonardo"))
 }
