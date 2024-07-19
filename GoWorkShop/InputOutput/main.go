@@ -10,3 +10,12 @@ func main() {
 	fmt.Println(data.Price)
 	printToScreen()
 }
+
+
+func add(x int, y int) int {
+	return x + y
+}
+
+func addAndSubtract(x int, y int) (int, int) {
+	return x + y, x - y
+}
