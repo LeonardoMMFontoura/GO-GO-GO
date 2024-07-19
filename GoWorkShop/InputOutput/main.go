@@ -1,5 +1,8 @@
 package main
 
 func main() {
-	print("Hello world")
+	message := "Hello World from the main file!\n"
+	print(message)
+
+	printToScreen()
 }
