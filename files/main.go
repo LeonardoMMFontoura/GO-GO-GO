@@ -2,11 +2,16 @@ package main
 
 import (
 	"fmt"
-	"mastra/file-mgt/fileutil"
+	file "mastra/filesutils"
+	"os"
 )
 
 func main() {
-	content, err := fileutils.ReadFile("Data/text.txt")
-	fmt.Println(content)
-	fmt.Println(err)	
+	rootPath, _ := os.Getwd()
+	content, err := file.ReadFile(rootPath + "/Data/text.txt")
+	if err == nil {
+		fmt.Println(content)
+	} else {
+		fmt.Printf("Error Panic!! %v", err)
+	}
 }
