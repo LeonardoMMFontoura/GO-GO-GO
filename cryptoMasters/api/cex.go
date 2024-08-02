@@ -1,6 +1,7 @@
 package api
 
 import (
+	"encoding/json"
 	"fmt"
 	"io"
 	"leo/cryptomasters/models"
@@ -21,8 +22,8 @@ func GetRate(currency string) (*models.Rate, error) {
 		if err != nil {
 			return nil, err
 		}
-		json := string(bodyBytes)
-		fmt.Println(json)
+		var cryptoRate models.Rate
+		err = json.Unmarshal(bodyBytes, &cryptoRate)
 	} else {
 		return nil, fmt.Errorf("status code received: %d", response.StatusCode)
 	}
