@@ -3,20 +3,45 @@ package main
 import (
 	"fmt"
 )
+
+type Person struct {
+	name string
+	age int
+}
+
+
 func main(){
-	capitalCities := map[string]string{
-		"USA": "Washington D.C.",
-		"India": "New Delhi",
-		"UK": "London",
-	}
-	fmt.Printf(capitalCities["USA"])
+	person := Person{name: "John", age: 29}
+	fmt.Printf("this is my new person: %+v", person)
 
-	capital, exists := capitalCities["Germany"]
-	if (exists){
-		fmt.Printf("It is here", capital)
-	}else{
-		fmt.Printf("It is not here")
+
+	employee := struct {
+		name string
+		age int  
+	}{
+		"Leo",
+		29,
+	}
+	fmt.Println("This is my brand new employee", employee)
+    type Address struct {
+		Street string
+		City string
 	}
 
-	delete(capitalCities, "UK")
+	type Contact struct {
+		Name string
+		Address Address
+		Phone string
+	}
+
+	contact := Contact{
+		Name:  "Mike",
+		Address: Address{
+			Street: "123 Main Street",
+			City: "Anytown",
+		},
+	}
+
+	fmt.Println("this is my contact: ", contact)
+	fmt.Println("this is my employee", employee)
 }
