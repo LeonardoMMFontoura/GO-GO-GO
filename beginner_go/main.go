@@ -44,4 +44,21 @@ func main(){
 
 	fmt.Println("this is my contact: ", contact)
 	fmt.Println("this is my employee", employee)
+
+	fmt.Printf("Person name before: %s\n", person.name)
+	modifyPerson(&person)
+	fmt.Printf("Person name after: %s\n", person.name)
+
+
+	x := 20
+	ptr := &x
+	fmt.Printf("value of x: %d and pointer of x: %p\n",x, ptr)
+	*ptr = 30
+	fmt.Printf("value of x: %d and pointer of x: %p\n",x, ptr)
 }
+
+func modifyPerson(person *Person){
+	person.name = "Leonardo"
+	fmt.Printf("new name: %s\n", person.name)
+}
+
