@@ -5,57 +5,32 @@ import (
 )
 
 func main() {
-
-	// var name string = "leonardo"
-	// fmt.Printf("My name is %s\n", name)
-	// age:= 27
-	// fmt.Printf("I'm %d\n", age)
-	// var city string
-	// city = "Rio de Janeiro"
-	// fmt.Printf("%s", city)
-
-	var city, continent, name string
-	city = "Rio de janeiro"
-	continent = "America"
-	name = "teste"
-	fmt.Printf("%s %s %s\n", city, continent, name)
-
-	var (
-		isEmployed bool = true
-		salary int = 15.000
-		positon string = "developer"
-	)
-	fmt.Printf("IsEmployed: %t , This is my salary: %d, and my position: %s\n", isEmployed, salary, positon)
-
-	//zero values
-	var defaultInt int 
-	var defaultBool bool
-	var defaultFloat float64
-	var defaultString string
-	fmt.Printf("valor int %d, valor bool %t, valor float %f, valor string %s", defaultInt, defaultBool, defaultFloat, defaultString)
-
-	const pi = 3.14
-	const (
-		Monday = 1
-		Tuesday = 2
-		Wednesday = 3
-	)
-	fmt.Printf("Monday - %d, Tuesday %d - Wednesday - %d\n", Monday, Tuesday, Wednesday)
-
-	const (
-		Jan = iota + 1
-		Feb
-		Mar
-		Apr
-	)
-
-	fmt.Printf("Jan - %d Feb - %d Mar - %d Apr - %d", Jan,Feb, Mar, Apr)
+	// age := 29
+	// if age >= 18 {
+	// 	fmt.Println("Adult")
+	// }else if age >= 13 {
+	// 	fmt.Println("Teenager")
+	// }else {
+	// 	fmt.Println("Child")
+	// }
 
 
-	result := add(3,4)
-	fmt.Printf("Result = %d", result)
-}
+	// day := "blabla"
+	// switch(day) {
+	// case "Monday":
+	// 	fmt.Println("Found Monday")
+	// case "Tuesday", "Wednesday", "Thursday":
+	// 	fmt.Println("Nope")
+	// default:
+	// 	fmt.Println("OH SHIT")
+	// }
 
-func add (a int, b int) int {
-	return a + b
+	// for i := 0; i < 10; i++ {
+	// 	fmt.Println("i")
+	// }
+	counter := 0
+	for counter < 3 {
+		fmt.Println(counter)
+		counter++
+	}
 }
