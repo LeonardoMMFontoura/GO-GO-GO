@@ -5,32 +5,12 @@ import (
 )
 
 func main() {
-	// age := 29
-	// if age >= 18 {
-	// 	fmt.Println("Adult")
-	// }else if age >= 13 {
-	// 	fmt.Println("Teenager")
-	// }else {
-	// 	fmt.Println("Child")
-	// }
+	numbers := [5]int {10,20,30,40,50} // arrays are imutable once declared, but we can subscribe the elements at index like above
+	numbers[0] = 100 // but we cant grow or shrink the array
+	fmt.Println("This is my array %v", numbers)
 
-
-	// day := "blabla"
-	// switch(day) {
-	// case "Monday":
-	// 	fmt.Println("Found Monday")
-	// case "Tuesday", "Wednesday", "Thursday":
-	// 	fmt.Println("Nope")
-	// default:
-	// 	fmt.Println("OH SHIT")
-	// }
-
-	// for i := 0; i < 10; i++ {
-	// 	fmt.Println("i")
-	// }
-	counter := 0
-	for counter < 3 {
-		fmt.Println(counter)
-		counter++
+	matrix := [2][3]int{
+		{1,2,3},
+		{4,5,6},
 	}
 }
